@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: red; */
+}
+
+body .controls {
+    background-color: skyblue;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    padding: 25px;
+    margin: 0px auto;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 9;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+body .controls .control img {
+    display: block;
+    width: 4rem;
+    scale: 1;
+}
+
+body .controls:hover .control img {
+    animation-name: control-un-hover-animation;
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+body .controls .control:hover img {
+    animation-name: control-hover-animation;
+    animation-duration: 0.3s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes control-hover-animation {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 1.5;
+    }
+}
+
+@keyframes control-un-hover-animation {
+    from {
+        scale: 1;
+    }
+    to {
+        scale: 0.8;
+    }
+}
+
+body .controls .control.pencil .colors {
+    position: absolute;
+    top: 100px;
+    left: -30px;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: burlywood;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+body .controls .control.pencil:hover .colors {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+body .controls .control.pencil .colors .color {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: burlywood;
+}
+
+body .controls .control.pencil .colors .color:nth-child(1) {
+    background-color: black;
+}
+
+body .controls .control.pencil .colors .color:nth-child(2) {
+    background-color: red;
+}
+
+body .controls .control.pencil .colors .color:nth-child(3) {
+    background-color: green;
+}
+
+body .controls .control.pencil .colors .color:nth-child(4) {
+    background-color: blue;
+}
