@@ -80,6 +80,11 @@ body .controls .control.pencil .colors {
     align-items: center;
 }
 
+body .controls .control.eraser .slider {
+    left: 66px;
+}
+
+body .controls .control.eraser:hover .slider,
 body .controls .control.pencil:hover .colors {
     display: flex;
     /* flex-direction: column; */
