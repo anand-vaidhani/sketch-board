@@ -10,10 +10,8 @@ body {
 
 body .controls {
     background-color: skyblue;
-    width: 600px;
-    height: 100px;
     display: flex;
-    padding: 25px;
+    padding: 0px 4px;
     margin: 0px auto;
     border-radius: 5px;
     position: fixed;
@@ -22,6 +20,10 @@ body .controls {
     transform: translate(-50%, 10px);
     justify-content: space-between;
     align-items: center;
+}
+
+body .controls .control {
+    padding: 16px 14px;
 }
 
 body .controls .control img {
@@ -64,6 +66,7 @@ body .controls .control:hover img {
     }
 }
 
+body .controls .control.eraser .slider,
 body .controls .control.pencil .colors {
     position: absolute;
     top: 90px;
