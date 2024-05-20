@@ -4,7 +4,13 @@
     box-sizing: border-box;
 }
 
+.d-none {
+    display: none;
+}
+
 body {
+    position: relative;
+    height: 100vh;
     /* background-color: red; */
 }
 
@@ -111,4 +117,53 @@ body .controls .control.pencil .colors .color:nth-child(3) {
 
 body .controls .control.pencil .colors .color:nth-child(4) {
     background-color: blue;
+}
+
+body .sticky-notes {
+    display: block;
+    position: absolute;
+    width: 250px;
+    border: 1px solid black;
+    height: fit-content;
+    top: 120px;
+    left: 20px;
+}
+
+body .sticky-notes .header {
+    height: 30px;
+    background-color: blue;
+    cursor: move;
+}
+
+body .sticky-notes .header .notes-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+body .sticky-notes .header .notes-controls .notes-control {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+body .sticky-notes .content {
+    height: 180px;
+}
+
+body .sticky-notes .content .text-area-input {
+    width: 100%;
+    height: 100%;
+    resize: none;
+}
+
+body .sticky-notes .content .text-area-input:focus {
+    outline: none;
 }
