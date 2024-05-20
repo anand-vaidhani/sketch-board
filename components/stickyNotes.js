@@ -34,6 +34,13 @@ export function createStickyNotesPopup(e) {
     const header = stickyNote.childNodes[0];
     header.addEventListener("mousedown", initiateDrag);
 
+    const controls = header.childNodes[1];
+    const closeButton = controls.childNodes[3];
+    closeButton.addEventListener("click", function(e) {
+        stickyNote.remove();
+    })
+    
+
 
     document.body.appendChild(stickyNote);
 }
