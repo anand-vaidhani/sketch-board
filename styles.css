@@ -176,3 +176,9 @@ body .sticky-notes .content .text-area-input {
 body .sticky-notes .content .text-area-input:focus {
     outline: none;
 }
+
+body .sticky-notes .content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
