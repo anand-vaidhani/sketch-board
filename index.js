@@ -1,5 +1,5 @@
 import { createStickyNotesPopup, createStickyNotesImage } from "./components/stickyNotes.js";
-import { initiateColors, initiateDraw } from "./components/drawing.js"
+import { initiateColors, initiateDraw, initiateErase, initiateEraserControl } from "./components/drawing.js"
 
 const pencilButton = document.getElementById('pencil-button');
 const eraserButton = document.getElementById('eraser-button');
@@ -15,7 +15,10 @@ const downloadButton = document.getElementById('download-button');
 let skickyNotes = [];
 
 initiateColors();
+initiateEraserControl();
 pencilButton.addEventListener('click', initiateDraw);
+eraserButton.addEventListener('click', initiateErase);
+
 
 
 notesButton.addEventListener('click', createStickyNotesPopup);
