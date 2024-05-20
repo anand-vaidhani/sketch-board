@@ -156,6 +156,15 @@ body .sticky-notes .header .notes-controls .notes-control {
 
 body .sticky-notes .content {
     height: 180px;
+    transition: height 0.3s;
+}
+
+body .sticky-notes .content.hide {
+    height: 0px;
+}
+
+body .sticky-notes .content.hide * {
+    display: none;
 }
 
 body .sticky-notes .content .text-area-input {
