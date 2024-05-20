@@ -64,3 +64,12 @@ export function initiateEraserControl() {
         eraserWidth = e.target.value;
     }
 }
+
+export function exportCanvas() {
+    const img = document.createElement('a');
+    img.download = `drawing.png`;
+    img.href = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
+    console.log(canvas)
+    console.log(img.href)
+    img.click();
+}

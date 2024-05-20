@@ -1,5 +1,5 @@
 import { createStickyNotesPopup, createStickyNotesImage } from "./components/stickyNotes.js";
-import { initiateColors, initiateDraw, initiateErase, initiateEraserControl } from "./components/drawing.js"
+import { exportCanvas, initiateColors, initiateDraw, initiateErase, initiateEraserControl } from "./components/drawing.js"
 
 const pencilButton = document.getElementById('pencil-button');
 const eraserButton = document.getElementById('eraser-button');
@@ -26,3 +26,5 @@ imageUploadButton.addEventListener('click', function(e) {
     imageUploadInput.click();
 })
 imageUploadInput.addEventListener('change', createStickyNotesImage);
+
+downloadButton.addEventListener('click', exportCanvas)
